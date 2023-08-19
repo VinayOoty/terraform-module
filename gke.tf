@@ -10,7 +10,7 @@ resource "google_container_cluster" "primary" {
     remove_default_node_pool = true
     initial_node_count = 1
     default_max_pods_per_node = var.pods_per_node
-    enable_shielded_nodes = true
+    enable_shielded_nodes = false
 
     network = var.vpc_network
     subnetwork = var.subnet
